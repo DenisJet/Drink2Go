@@ -1,0 +1,20 @@
+.button {
+  @include font(400, 16px, 24px, $basic-white);
+  background-color: $basic-primary;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $basic-gray;
+  }
+}

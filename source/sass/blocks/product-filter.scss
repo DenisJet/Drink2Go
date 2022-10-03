@@ -1,0 +1,340 @@
+.product-filter {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.product-filter legend {
+  @include font(600, 16px, 24px, $basic-black);
+  margin-bottom: 22px;
+}
+
+.product-filter fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+
+  &:last-of-type {
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.product-filter__price-range-controls {
+  position: relative;
+  height: 12px;
+  padding-top: 12px;
+  margin-bottom: 35px;
+}
+
+.product-filter__price-scale {
+  height: 2px;
+  background-color: $primary-lighgray;
+}
+
+.product-filter__price-bar {
+  height: 4px;
+  background-color: $primary-lighter;
+
+  &--disabled {
+    background-color: $basic-gray;
+  }
+}
+
+.product-filter__price-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: $basic-white;
+  border: 2px solid $basic-white;
+  outline: 2px solid $primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 3px;
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    left: 0;
+  }
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &:active {
+    background-color: $basic-primary;
+  }
+
+  &--disabled {
+    background-color: $basic-white;
+    border: 2px solid $basic-white;
+    outline: 2px solid $basic-gray;
+    cursor: default;
+
+    &:hover {
+      background-color: $basic-white;
+    }
+
+    &:focus {
+      background-color: $basic-white;
+    }
+
+    &:active {
+      background-color: $basic-white;
+    }
+  }
+}
+
+.product-filter__price-controls {
+  display: flex;
+}
+
+.product-filter__price-controls label {
+  width: 100%;
+}
+
+.product-filter__price-controls input {
+  @include font(500, 16px, 24px, $basic-black);
+  width: 100%;
+  padding: 7px 10px;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  text-align: center;
+  outline: none;
+
+  &:focus {
+    border: 2px solid $primary-darker;
+  }
+
+  &:disabled {
+    background: $background-lightestgray;
+    border: 2px solid $primary-lighgray;
+  }
+}
+
+.product-filter__price-controls span {
+  margin-left: 18px;
+  margin-right: 18px;
+  align-self: center;
+}
+
+.product-filter ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.product-filter li:not(:last-child) {
+  margin-bottom: 21px;
+}
+
+.product-filter__got-milk,
+.product-filter__country {
+  @include font(400, 16px, 24px, $basic-black);
+}
+
+.product-filter__input--radio + label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 34px;
+}
+
+.product-filter__input--radio + label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: $basic-white;
+  border: 2px solid $basic-white;
+  outline: 2px solid $basic-gray;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.product-filter__input--radio + label:hover::before {
+  background-color: $primary-opacity;
+}
+
+.product-filter__input--radio + label:focus::before {
+  background-color: $primary-opacity;
+}
+
+.product-filter__input--radio:checked + label::before {
+  background-color: $basic-primary;
+  outline: 2px solid $basic-primary;
+}
+
+.product-filter__input--radio:disabled + label::before {
+  background-color: $basic-white;
+  outline: 2px solid $primary-lighgray;
+  border: 2px solid $basic-white;
+  cursor: default;
+}
+
+.product-filter__input--radio:checked:disabled + label::before {
+  background-color: $primary-lighgray;
+  outline: 2px solid $primary-lighgray;
+  cursor: default;
+}
+
+.product-filter__input--radio:disabled + label {
+  cursor: default;
+}
+
+.product-filter__input--checkbox + label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 52px;
+}
+
+.product-filter__input--checkbox + label::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 42px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  background-color: $basic-gray;
+  border-radius: 12px;
+}
+
+.product-filter__input--checkbox + label:hover::before {
+  background-color: $primary-opacity;
+  outline: 2px solid $primary-lighter;
+  outline-offset: -2px;
+}
+
+.product-filter__input--checkbox:checked + label::before {
+  background-color: $basic-primary;
+}
+
+.product-filter__input--checkbox + label::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  background-color: $basic-white;
+  border-radius: 12px;
+}
+
+.product-filter__input--checkbox:checked + label::after {
+  left: 20px;
+}
+
+.product-filter__input--checkbox:disabled + label::before {
+  background-color: $primary-lighgray;
+  outline: none;
+  cursor: default;
+}
+
+.product-filter__input--checkbox:disabled + label::after {
+  cursor: default;
+}
+
+.product-filter__input--checkbox:checked:disabled + label::after {
+  background-color: $basic-gray;
+  outline: none;
+  cursor: default;
+}
+
+.product-filter__input--checkbox:disabled + label {
+  cursor: default;
+}
+
+.product-filter__buttons-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    grid-column: 1 / -1;
+  }
+}
+
+.product-filter__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--submit {
+    @include font(400, 13px, 24px, $basic-white);
+    padding: 11px 15px;
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      padding: 8px 4px;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: auto;
+      margin-right: 9px;
+    }
+  }
+
+  &--reset {
+    @include font(400, 14px, 24px, $basic-primary);
+    padding: 11px 17px;
+    background-color: $basic-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $basic-white;
+    }
+
+    &:disabled {
+      background-color: $primary-lighgray;
+      color: $basic-white;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+      margin-right: auto;
+      margin-left: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: auto;
+      margin-left: 9px;
+    }
+  }
+}

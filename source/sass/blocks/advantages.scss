@@ -1,0 +1,137 @@
+.advantages {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.advantages__section-title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: none;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  padding-top: 66px;
+  text-align: center;
+  margin-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 77px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 66px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    height: 52px;
+
+    @media (min-width: $tablet-width) {
+      transform: none;
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &--speed::before {
+    width: 46px;
+    background-image: url("../../img/speed.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/speed@2x.png");
+      background-size: contain;
+    }
+  }
+
+  &--comfort::before {
+    width: 48px;
+    background-image: url("../../img/comfort.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/comfort@2x.png");
+      background-size: contain;
+    }
+  }
+
+  &--courage::before {
+    width: 38px;
+    background-image: url("../../img/courage.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/courage@2x.png");
+      background-size: contain;
+    }
+  }
+
+  &--ecology::before {
+    width: 42px;
+    background-image: url("../../img/ecology.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/ecology@2x.png");
+      background-size: contain;
+    }
+  }
+}
+
+.advantages__item-title {
+  @include font(700, 18px, 32px, $basic-black);
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    @include font(700, 24px, 36px, $basic-black);
+    margin-bottom: 10px;
+  }
+}
+
+.advantages__item-text {
+  @include font(400, 14px, 20px, $basic-black);
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font(400, 16px, 24px, $basic-black);
+  }
+}

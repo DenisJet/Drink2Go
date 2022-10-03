@@ -1,0 +1,32 @@
+.page__body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 320px;
+
+  @include font(400, 14px, 20px, $basic-black);
+}
+
+.page__promo {
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 253px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
+  }
+}
+
+.page__advantages {
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 120px;
+  }
+}

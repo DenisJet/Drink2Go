@@ -1,0 +1,35 @@
+// Viewports
+
+$mobile-width: 320px;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$tablet-max-width: 1439px;
+$desktop-width: 1440px;
+
+// mixins
+
+@mixin font($f-weight, $f-size, $l-height, $color) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: $f-weight;
+  font-size: $f-size;
+  line-height: $l-height;
+  color: $color;
+}
+
+// Colors
+
+$basic-white: #ffffff;
+$basic-gray: #bdbdbd;
+$basic-black: #333333;
+$basic-primary: #7859cf;
+$basic-secondary: #f0ebff;
+
+$primary-opacity: transparentize($basic-primary,.75);
+$primary-lighter: #9070ec;
+$primary-darker: #593cac;
+$primary-lighgray: #e2e2e2;
+
+$background-lightestgray: #f8f8f8;
+$background-flatwhite: #f3ebe1;
+$background-lavenderlatte: #eae6fc;
+$background-espresso: #e5e6e8;

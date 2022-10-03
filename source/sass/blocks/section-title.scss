@@ -1,0 +1,15 @@
+.section-title {
+  @include font(700, 24px, 36px, $basic-black);
+  margin: 0;
+  margin-bottom: 4px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font(700, 42px, 64px, $basic-black);
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}

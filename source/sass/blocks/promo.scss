@@ -1,0 +1,13 @@
+.promo__wrapper {
+  &--flat-white {
+    background-color: $background-flatwhite;
+  }
+
+  &--lavender {
+    background-color: $background-lavenderlatte;
+  }
+
+  &--espresso {
+    background-color: $background-espresso;
+  }
+}

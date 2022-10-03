@@ -1,0 +1,140 @@
+.products__sort-by {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    justify-content: flex-end;
+  }
+}
+
+.products__sort-by-title {
+  @include font(600, 16px, 24px, $basic-black);
+  margin: 0;
+  margin-right: 10px;
+}
+
+.products__sort-by-list {
+  border: none;
+  background-color: $background-lightestgray;
+  @include font(600, 16px, 24px, $basic-primary);
+
+  &:hover {
+    background-color: $basic-secondary;
+  }
+
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }
+}
+
+.products__sort-by-list-item {
+  @include font(400, 16px, 24px, $basic-black);
+}
+
+.products__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 60px;
+  }
+}
+
+.products__list-item {
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.products__pagination-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.products__pagination-item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.products__pagination-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font(400, 16px, 24px, $basic-primary);
+  text-decoration: none;
+  background-color: $basic-white;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    color: $basic-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &--disabled {
+    background-color: $primary-lighgray;
+    cursor: default;
+  }
+
+  &--active,
+  &--active:hover,
+  &--active:focus,
+  &--active:active {
+    background-color: transparent;
+    font-weight: 600;
+    color: $basic-black;
+  }
+}
+
+.products__pagination-button--prev,
+.products__pagination-button--next {
+  @media (min-width: $tablet-width) {
+    width: 150px;
+  }
+}
+
+.products__pagination-button--prev span,
+.products__pagination-button--next span {
+  font-size: 14px;
+
+  &:first-child {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+}
