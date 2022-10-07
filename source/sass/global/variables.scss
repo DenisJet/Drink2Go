@@ -24,7 +24,7 @@ $basic-black: #333333;
 $basic-primary: #7859cf;
 $basic-secondary: #f0ebff;
 
-$primary-opacity: transparentize($basic-primary,.75);
+$primary-opacity: transparentize($basic-primary, 0.75);
 $primary-lighter: #9070ec;
 $primary-darker: #593cac;
 $primary-lighgray: #e2e2e2;

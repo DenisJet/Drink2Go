@@ -35,7 +35,7 @@ const sliderButtonNext = document.querySelector(".slider__next-slide");
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider__item");
 const buttons = document.querySelectorAll(".slider__pagination-button");
-const sliderWrapper =document.querySelector(".promo__wrapper");
+const sliderWrapper = document.querySelector(".promo__wrapper");
 
 let slideCounter = 0;
 

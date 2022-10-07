@@ -20,10 +20,10 @@
 
 .main-nav__logo {
   padding-left: 20px;
-  display: flex;
+  display: inline-flex;
   text-decoration: none;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-left: 0;
   }
 }
@@ -118,7 +118,7 @@
   display: none;
 }
 
-.main-nav--nojs .main-nav__list {
+.main-nav--nojs .main-nav__site-list {
   @media (max-width: $mobile-width-only) {
     display: block;
   }

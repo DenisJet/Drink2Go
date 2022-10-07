@@ -16,6 +16,7 @@
 .products__sort-by-list {
   border: none;
   background-color: $background-lightestgray;
+
   @include font(600, 16px, 24px, $basic-primary);
 
   &:hover {
@@ -81,6 +82,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   @include font(400, 16px, 24px, $basic-primary);
   text-decoration: none;
   background-color: $basic-white;

@@ -1,38 +1,38 @@
 .map {
   background-color: $basic-secondary;
-  background-image: url("../../img/map-mobile.png");
+  background-image: url("../img/map-mobile.png");
   background-repeat: no-repeat;
   height: 420px;
   min-width: 320px;
   background-position: center center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/map-mobile@2x.png");
+    background-image: url("../img/map-mobile@2x.png");
     background-size: contain;
   }
 
   @media (min-width: $tablet-width) {
     height: 480px;
-    background-image: url("../../img/map-tablet.png");
+    background-image: url("../img/map-tablet.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/map-tablet@2x.png");
+      background-image: url("../img/map-tablet@2x.png");
       background-size: contain;
     }
   }
 
   @media (min-width: $desktop-width) {
     height: 540px;
-    background-image: url("../../img/map-desktop.png");
+    background-image: url("../img/map-desktop.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/map-desktop@2x.png");
+      background-image: url("../img/map-desktop@2x.png");
       background-size: contain;
     }
   }
 }
 
-#map {
+.map__div {
   height: 420px;
 
   @media (min-width: $tablet-width) {

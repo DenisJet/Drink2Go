@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Drink2Go</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="preload"
+      href="fonts/montserrat-bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
       integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
       crossorigin=""
-    >
+    />
     <script
       src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
       integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
@@ -31,22 +55,22 @@
               srcset="img/logo-desktop.svg"
               width="170"
               height="36"
-            >
+            />
             <source
               media="(min-width: 768px)"
               srcset="img/logo-tablet.svg"
               width="82"
               height="36"
-            >
+            />
             <img
               src="img/logo-mobile.svg"
               width="32"
               height="36"
               alt="Логотип компании"
-            >
+            />
           </picture>
           <span class="main-nav__text"
-            >Интернет-магазин<br >
+            >Интернет-магазин<br />
             кофейных напитков</span
           >
         </a>
@@ -108,288 +132,290 @@
 
     <main class="page__main">
       <h1 class="visually-hidden">Drink2Go</h1>
-      <section class="promo page__promo promo__wrapper promo__wrapper--flat-white">
-        <h2 class="visually-hidden">Промо-блок</h2>
-        <div class="slider promo__slider container">
-          <ul class="slider__list slider promo__slider-list">
-            <li
-              class="slider__item slider__item--1 slider__item--flat-white slider__item--current"
-            >
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="
-                    img/flat-white-desktop.webp    1x,
-                    img/flat-white-desktop@2x.webp 2x
-                  "
-                  width="600"
-                  height="600"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/flat-white-tablet.webp    1x,
-                    img/flat-white-tablet@2x.webp 2x
-                  "
-                  width="476"
-                  height="476"
-                >
-                <source
-                  type="image/webp"
-                  srcset="
-                    img/flat-white-mobile.webp    1x,
-                    img/flat-white-mobile@2x.webp 2x
-                  "
-                  width="280"
-                  height="280"
-                >
+      <section class="promo page__promo">
+        <div class="promo__wrapper promo__wrapper--flat-white">
+          <h2 class="visually-hidden">Промо-блок</h2>
+          <div class="slider promo__slider container">
+            <ul class="slider__list promo__slider-list">
+              <li
+                class="slider__item slider__item--1 slider__item--flat-white slider__item--current"
+              >
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/flat-white-desktop.webp    1x,
+                      img/flat-white-desktop@2x.webp 2x
+                    "
+                    width="600"
+                    height="600"
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/flat-white-tablet.webp    1x,
+                      img/flat-white-tablet@2x.webp 2x
+                    "
+                    width="476"
+                    height="476"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/flat-white-mobile.webp    1x,
+                      img/flat-white-mobile@2x.webp 2x
+                    "
+                    width="280"
+                    height="280"
+                  />
 
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="
-                    img/flat-white-desktop.png    1x,
-                    img/flat-white-desktop@2x.png 2x
-                  "
-                  width="600"
-                  height="600"
-                >
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/flat-white-tablet.png    1x,
-                    img/flat-white-tablet@2x.png 2x
-                  "
-                  width="476"
-                  height="476"
-                >
-                <img
-                  class="slider__image"
-                  src="img/flat-white-mobile.png"
-                  srcset="img/flat-white-mobile@2x.png 2x"
-                  width="280"
-                  height="280"
-                  alt="Изображение продукта"
-                >
-              </picture>
-              <div class="slider__text">
-                <p class="slider__slogan">Новинка!</p>
-                <p class="slider__title">Декаф Флэт Уайт</p>
-                <p class="slider__description">
-                  Свежесваренный кофе без кофеина из Эфиопии с натуральным
-                  фермерским молоком — то, что нужно для расслабления после
-                  тяжёлого рабочего дня
-                </p>
-                <div class="slider__purchase">
-                  <del class="slider__old-price">295₽</del>
-                  <span class="slider__new-price">225₽</span>
-                  <a class="button slider__button" href="#">Заказать</a>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/flat-white-desktop.png    1x,
+                      img/flat-white-desktop@2x.png 2x
+                    "
+                    width="600"
+                    height="600"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/flat-white-tablet.png    1x,
+                      img/flat-white-tablet@2x.png 2x
+                    "
+                    width="476"
+                    height="476"
+                  />
+                  <img
+                    class="slider__image"
+                    src="img/flat-white-mobile.png"
+                    srcset="img/flat-white-mobile@2x.png 2x"
+                    width="280"
+                    height="280"
+                    alt="Изображение продукта"
+                  />
+                </picture>
+                <div class="slider__text">
+                  <p class="slider__slogan">Новинка!</p>
+                  <p class="slider__title">Декаф Флэт Уайт</p>
+                  <p class="slider__description">
+                    Свежесваренный кофе без кофеина из Эфиопии с натуральным
+                    фермерским молоком — то, что нужно для расслабления после
+                    тяжёлого рабочего дня
+                  </p>
+                  <div class="slider__purchase">
+                    <del class="slider__old-price">295₽</del>
+                    <span class="slider__new-price">225₽</span>
+                    <a class="button slider__button" href="#">Заказать</a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="slider__item slider__item--2 slider__item--lavender">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="
-                    img/lavender-desktop.webp    1x,
-                    img/lavender-desktop@2x.webp 2x
-                  "
-                  width="600"
-                  height="600"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/lavender-tablet.webp    1x,
-                    img/lavender-tablet@2x.webp 2x
-                  "
-                  width="476"
-                  height="476"
-                >
-                <source
-                  type="image/webp"
-                  srcset="
-                    img/lavender-mobile.webp    1x,
-                    img/lavender-mobile@2x.webp 2x
-                  "
-                  width="280"
-                  height="280"
-                >
+              </li>
+              <li class="slider__item slider__item--2 slider__item--lavender">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/lavender-desktop.webp    1x,
+                      img/lavender-desktop@2x.webp 2x
+                    "
+                    width="600"
+                    height="600"
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/lavender-tablet.webp    1x,
+                      img/lavender-tablet@2x.webp 2x
+                    "
+                    width="476"
+                    height="476"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/lavender-mobile.webp    1x,
+                      img/lavender-mobile@2x.webp 2x
+                    "
+                    width="280"
+                    height="280"
+                  />
 
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="
-                    img/lavender-desktop.png    1x,
-                    img/lavender-desktop@2x.png 2x
-                  "
-                  width="600"
-                  height="600"
-                >
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/lavender-tablet.png    1x,
-                    img/lavender-tablet@2x.png 2x
-                  "
-                  width="476"
-                  height="476"
-                >
-                <img
-                  class="slider__image"
-                  src="img/lavender-mobile.png"
-                  srcset="img/lavender-mobile@2x.png 2x"
-                  width="280"
-                  height="280"
-                  alt="Изображение продукта"
-                >
-              </picture>
-              <div class="slider__text">
-                <p class="slider__slogan">Новинка!</p>
-                <p class="slider__title">Лавандовый Латте</p>
-                <p class="slider__description">
-                  Невероятное сочетание перуанской высокогорной арабики с
-                  молоком ламы и лавандовым сиропом унесёт вас прямо на вершину
-                  Радужных гор
-                </p>
-                <div class="slider__purchase">
-                  <del class="slider__old-price">285₽</del>
-                  <span class="slider__new-price">265₽</span>
-                  <a class="button slider__button" href="#">Заказать</a>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/lavender-desktop.png    1x,
+                      img/lavender-desktop@2x.png 2x
+                    "
+                    width="600"
+                    height="600"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/lavender-tablet.png    1x,
+                      img/lavender-tablet@2x.png 2x
+                    "
+                    width="476"
+                    height="476"
+                  />
+                  <img
+                    class="slider__image"
+                    src="img/lavender-mobile.png"
+                    srcset="img/lavender-mobile@2x.png 2x"
+                    width="280"
+                    height="280"
+                    alt="Изображение продукта"
+                  />
+                </picture>
+                <div class="slider__text">
+                  <p class="slider__slogan">Новинка!</p>
+                  <p class="slider__title">Лавандовый Латте</p>
+                  <p class="slider__description">
+                    Невероятное сочетание перуанской высокогорной арабики с
+                    молоком ламы и лавандовым сиропом унесёт вас прямо на
+                    вершину Радужных гор
+                  </p>
+                  <div class="slider__purchase">
+                    <del class="slider__old-price">285₽</del>
+                    <span class="slider__new-price">265₽</span>
+                    <a class="button slider__button" href="#">Заказать</a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="slider__item slider__item--3 slider__item--espresso">
-              <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1440px)"
-                  srcset="
-                    img/espresso-desktop.webp    1x,
-                    img/espresso-desktop@2x.webp 2x
-                  "
-                  width="600"
-                  height="600"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/espresso-tablet.webp    1x,
-                    img/espresso-tablet@2x.webp 2x
-                  "
-                  width="476"
-                  height="476"
-                >
-                <source
-                  type="image/webp"
-                  srcset="
-                    img/espresso-mobile.webp    1x,
-                    img/espresso-mobile@2x.webp 2x
-                  "
-                  width="280"
-                  height="280"
-                >
+              </li>
+              <li class="slider__item slider__item--3 slider__item--espresso">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/espresso-desktop.webp    1x,
+                      img/espresso-desktop@2x.webp 2x
+                    "
+                    width="600"
+                    height="600"
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/espresso-tablet.webp    1x,
+                      img/espresso-tablet@2x.webp 2x
+                    "
+                    width="476"
+                    height="476"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/espresso-mobile.webp    1x,
+                      img/espresso-mobile@2x.webp 2x
+                    "
+                    width="280"
+                    height="280"
+                  />
 
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="
-                    img/espresso-desktop.png    1x,
-                    img/espresso-desktop@2x.png 2x
-                  "
-                  width="600"
-                  height="600"
-                >
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    img/espresso-tablet.png    1x,
-                    img/espresso-tablet@2x.png 2x
-                  "
-                  width="476"
-                  height="476"
-                >
-                <img
-                  class="slider__image"
-                  src="img/espresso-mobile.png"
-                  srcset="img/espresso-mobile@2x.png 2x"
-                  width="280"
-                  height="280"
-                  alt="Изображение продукта"
-                >
-              </picture>
-              <div class="slider__text">
-                <p class="slider__slogan">Новинка!</p>
-                <p class="slider__title">Тройной Эспрессо</p>
-                <p class="slider__description">
-                  Мощнее укола адреналина, чернее самой тёмной ночи, этот
-                  тройной эспрессо из Колумбии покажет вам, что такое настоящая
-                  бодрость
-                </p>
-                <div class="slider__purchase">
-                  <del class="slider__old-price">395₽</del>
-                  <span class="slider__new-price">375₽</span>
-                  <a class="button slider__button" href="#">Заказать</a>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/espresso-desktop.png    1x,
+                      img/espresso-desktop@2x.png 2x
+                    "
+                    width="600"
+                    height="600"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/espresso-tablet.png    1x,
+                      img/espresso-tablet@2x.png 2x
+                    "
+                    width="476"
+                    height="476"
+                  />
+                  <img
+                    class="slider__image"
+                    src="img/espresso-mobile.png"
+                    srcset="img/espresso-mobile@2x.png 2x"
+                    width="280"
+                    height="280"
+                    alt="Изображение продукта"
+                  />
+                </picture>
+                <div class="slider__text">
+                  <p class="slider__slogan">Новинка!</p>
+                  <p class="slider__title">Тройной Эспрессо</p>
+                  <p class="slider__description">
+                    Мощнее укола адреналина, чернее самой тёмной ночи, этот
+                    тройной эспрессо из Колумбии покажет вам, что такое
+                    настоящая бодрость
+                  </p>
+                  <div class="slider__purchase">
+                    <del class="slider__old-price">395₽</del>
+                    <span class="slider__new-price">375₽</span>
+                    <a class="button slider__button" href="#">Заказать</a>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-          <div class="slider__pagination">
+              </li>
+            </ul>
+            <div class="slider__pagination">
+              <button
+                class="slider__pagination-button slider__pagination-button--current"
+                type="button"
+                aria-label="Первый слайд"
+              ></button>
+              <button
+                class="slider__pagination-button"
+                type="button"
+                aria-label="Второй слайд"
+              ></button>
+              <button
+                class="slider__pagination-button"
+                type="button"
+                aria-label="Третий слайд"
+              ></button>
+            </div>
             <button
-              class="slider__pagination-button slider__pagination-button--current"
+              class="slider__prev-slide"
               type="button"
-              aria-label="Первый слайд"
-            ></button>
-            <button
-              class="slider__pagination-button"
-              type="button"
-              aria-label="Второй слайд"
-            ></button>
-            <button
-              class="slider__pagination-button"
-              type="button"
-              aria-label="Третий слайд"
-            ></button>
-          </div>
-          <button
-            class="slider__prev-slide"
-            type="button"
-            aria-label="Предыдущий слайд"
-          >
-            <svg
-              class="slider__icon slider__icon--prev"
-              width="11"
-              height="20"
-              viewBox="0 0 11 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
               aria-label="Предыдущий слайд"
             >
-              <use xlink:href="img/sprite.svg#prev-slide"></use>
-            </svg>
-          </button>
-          <button
-            class="slider__next-slide"
-            type="button"
-            aria-label="Следующий слайд"
-          >
-            <svg
-              class="slider__icon slider__icon--next"
-              width="11"
-              height="20"
-              viewBox="0 0 11 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
+              <svg
+                class="slider__icon slider__icon--prev"
+                width="11"
+                height="20"
+                viewBox="0 0 11 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Предыдущий слайд"
+              >
+                <use xlink:href="img/sprite.svg#prev-slide"></use>
+              </svg>
+            </button>
+            <button
+              class="slider__next-slide"
+              type="button"
               aria-label="Следующий слайд"
             >
-              <use xlink:href="img/sprite.svg#next-slide"></use>
-            </svg>
-          </button>
+              <svg
+                class="slider__icon slider__icon--next"
+                width="11"
+                height="20"
+                viewBox="0 0 11 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Следующий слайд"
+              >
+                <use xlink:href="img/sprite.svg#next-slide"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -466,10 +492,10 @@
                       name="min-price"
                       value=""
                       placeholder="0"
-                    > </label
+                    /> </label
                   ><span> — </span>
                   <label class="product-filter__price">
-                    <input type="text" name="max-price" value="900" >
+                    <input type="text" name="max-price" value="900" />
                   </label>
                 </div>
               </div>
@@ -480,44 +506,44 @@
               <ul>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--radio"
+                    class="visually-hidden product-filter__input product-filter__input--radio"
                     type="radio"
                     name="product-got-milk"
                     value="no-matter"
                     id="milk-no-matter"
                     checked
-                  >
+                  />
                   <label for="milk-no-matter">Неважно</label>
                 </li>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--radio"
+                    class="visually-hidden product-filter__input product-filter__input--radio"
                     type="radio"
                     name="product-got-milk"
                     value="animal"
                     id="milk-animal"
-                  >
+                  />
                   <label for="milk-animal">Только животное</label>
                 </li>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--radio"
+                    class="visually-hidden product-filter__input product-filter__input--radio"
                     type="radio"
                     name="product-got-milk"
                     value="vegetable"
                     id="milk-vegetable"
-                  >
+                  />
                   <label for="milk-vegetable">Только растительное</label>
                 </li>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--radio"
+                    class="visually-hidden product-filter__input product-filter__input--radio"
                     type="radio"
                     name="product-got-milk"
                     value="without"
                     id="milk-wthout"
                     disabled
-                  >
+                  />
                   <label for="milk-wthout">Без молока</label>
                 </li>
               </ul>
@@ -528,51 +554,51 @@
               <ul>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--checkbox"
+                    class="visually-hidden product-filter__input product-filter__input--checkbox"
                     type="checkbox"
                     name="brasilia"
                     id="country-brasilia"
                     checked
-                  >
+                  />
                   <label for="country-brasilia">Бразилия</label>
                 </li>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--checkbox"
+                    class="visually-hidden product-filter__input product-filter__input--checkbox"
                     type="checkbox"
                     name="ephiopia"
                     id="country-ephiopia"
-                  >
+                  />
                   <label for="country-ephiopia">Эфиопия</label>
                 </li>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--checkbox"
+                    class="visually-hidden product-filter__input product-filter__input--checkbox"
                     type="checkbox"
                     name="colombia"
                     id="country-colombia"
-                  >
+                  />
                   <label for="country-colombia">Колумбия</label>
                 </li>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--checkbox"
+                    class="visually-hidden product-filter__input product-filter__input--checkbox"
                     type="checkbox"
                     name="costa-rica"
                     id="country-costa-rica"
                     checked
                     disabled
-                  >
+                  />
                   <label for="country-costa-rica">Коста-Рика</label>
                 </li>
                 <li>
                   <input
-                    class="visually-hidden product-filter__input--checkbox"
+                    class="visually-hidden product-filter__input product-filter__input--checkbox"
                     type="checkbox"
                     name="peru"
                     id="country-peru"
                     disabled
-                  >
+                  />
                   <label for="country-peru">Перу</label>
                 </li>
               </ul>
@@ -588,7 +614,7 @@
                 class="button product-filter__button product-filter__button--reset"
                 type="reset"
                 value="Сбросить фильтр"
-              >
+              />
             </div>
           </form>
 
@@ -619,14 +645,14 @@
                       srcset="
                         img/product-1.webp    1x,
                         img/product-1@2x.webp 2x
-                      " >
+                      " />
                     <img
                       class="product-card__image"
                       src="img/product-1.jpg"
                       srcset="img/product-1@2x.jpg 2x"
                       width="130"
                       height="188"
-                      alt="Изображение продукта" ></picture
+                      alt="Изображение продукта" /></picture
                 ></a>
                 <div class="product-card__description">
                   <p class="product-card__title">
@@ -655,14 +681,14 @@
                       srcset="
                         img/product-2.webp    1x,
                         img/product-2@2x.webp 2x
-                      ">
+                      " />
                     <img
                       class="product-card__image"
                       src="img/product-2.jpg"
                       srcset="img/product-2@2x.jpg 2x"
                       width="130"
                       height="188"
-                      alt="Изображение продукта"></picture
+                      alt="Изображение продукта" /></picture
                 ></a>
                 <div class="product-card__description">
                   <p class="product-card__title">
@@ -691,14 +717,14 @@
                       srcset="
                         img/product-3.webp    1x,
                         img/product-3@2x.webp 2x
-                      ">
+                      " />
                     <img
                       class="product-card__image"
                       src="img/product-3.jpg"
                       srcset="img/product-3@2x.jpg 2x"
                       width="130"
                       height="188"
-                      alt="Изображение продукта"></picture
+                      alt="Изображение продукта" /></picture
                 ></a>
                 <div class="product-card__description">
                   <p class="product-card__title">
@@ -727,14 +753,14 @@
                       srcset="
                         img/product-4.webp    1x,
                         img/product-4@2x.webp 2x
-                      ">
+                      " />
                     <img
                       class="product-card__image"
                       src="img/product-4.jpg"
                       srcset="img/product-4@2x.jpg 2x"
                       width="130"
                       height="188"
-                      alt="Изображение продукта"></picture
+                      alt="Изображение продукта" /></picture
                 ></a>
                 <div class="product-card__description">
                   <p class="product-card__title">
@@ -763,14 +789,14 @@
                       srcset="
                         img/product-5.webp    1x,
                         img/product-5@2x.webp 2x
-                      ">
+                      " />
                     <img
                       class="product-card__image"
                       src="img/product-5.jpg"
                       srcset="img/product-5@2x.jpg 2x"
                       width="130"
                       height="188"
-                      alt="Изображение продукта"></picture
+                      alt="Изображение продукта" /></picture
                 ></a>
                 <div class="product-card__description">
                   <p class="product-card__title">
@@ -799,14 +825,14 @@
                       srcset="
                         img/product-6.webp    1x,
                         img/product-6@2x.webp 2x
-                      ">
+                      " />
                     <img
                       class="product-card__image"
                       src="img/product-6.jpg"
                       srcset="img/product-6@2x.jpg 2x"
                       width="130"
                       height="188"
-                      alt="Изображение продукта"></picture
+                      alt="Изображение продукта" /></picture
                 ></a>
                 <div class="product-card__description">
                   <p class="product-card__title">
@@ -875,7 +901,7 @@
 
       <section class="map page__map">
         <h2 class="visually-hidden">Наше расположение на карте</h2>
-        <div id="map"></div>
+        <div class="map__div" id="map"></div>
       </section>
     </main>
 
@@ -889,13 +915,13 @@
               srcset="img/logo-desktop.svg"
               width="170"
               height="36"
-            >
+            />
             <img
               src="img/logo-tablet.svg"
               width="82"
               height="36"
               alt="Логотип компании"
-            >
+            />
           </picture>
           <span class="footer__logo-text"
             >Интернет-магазин кофейных напитков</span

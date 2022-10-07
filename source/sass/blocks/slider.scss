@@ -99,7 +99,7 @@
     transform: translate(-50%, 0);
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     position: static;
     width: 600px;
     height: 600px;
@@ -114,7 +114,6 @@
 }
 
 .slider__item {
-
   &--current {
     display: flex;
 
@@ -171,12 +170,14 @@
 
 .slider__slogan {
   margin: 10px 0 4px 0;
+
   @include font(700, 12px, 16px, $basic-primary);
   text-transform: uppercase;
 }
 
 .slider__title {
   margin: 0 0 10px 0;
+
   @include font(700, 36px, 48px, $basic-black);
   letter-spacing: 0.02em;
 
@@ -188,6 +189,7 @@
 
 .slider__description {
   margin: 0 0 20px 0;
+
   @include font(400, 14px, 20px, $basic-black);
 
   @media (min-width: $tablet-width) {
@@ -205,11 +207,13 @@
 
 .slider__old-price {
   margin-right: 6px;
+
   @include font(400, 16px, 32px, $basic-primary);
 }
 
 .slider__new-price {
   margin-right: 20px;
+
   @include font(600, 20px, 32px, $basic-black);
 }
 
