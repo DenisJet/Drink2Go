@@ -39,12 +39,16 @@ const sliderWrapper = document.querySelector(".promo__wrapper");
 
 let slideCounter = 0;
 
-const wrappers = ["promo__wrapper--flat-white", "promo__wrapper--lavender", "promo__wrapper--espresso"];
+const wrappers = [
+  "promo__wrapper--flat-white",
+  "promo__wrapper--lavender",
+  "promo__wrapper--espresso",
+];
 
 const wrapperMaker = (wrapper) => {
-  sliderWrapper.classList.remove(wrappers[0], wrappers[1], wrappers[2])
+  sliderWrapper.classList.remove(wrappers[0], wrappers[1], wrappers[2]);
   sliderWrapper.classList.add(wrappers[wrapper]);
-}
+};
 
 sliderButtonNext.addEventListener("click", function () {
   ++slideCounter;
@@ -157,7 +161,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const mainPinIcon = L.icon({
-  iconUrl: '../img/map-pin.svg',
+  iconUrl: "../img/map-pin.svg",
   iconSize: [38, 50],
   iconAnchor: [19, 50],
 });
@@ -169,10 +173,43 @@ const mainPinMarker = L.marker(
   },
   {
     icon: mainPinIcon,
-  },
+  }
 );
 
 mainPinMarker.addTo(map);
+
+// noUiRangeSlider
+
+const priceSlider = document.querySelector("#price-slider");
+const inputMinPrice = document.querySelector("#min-price");
+const inputMaxPrice = document.querySelector("#max-price");
+
+const inputs = [inputMinPrice, inputMaxPrice];
+
+noUiSlider.create(priceSlider, {
+  start: [0, 900],
+  connect: true,
+  range: {
+    min: 0,
+    max: 1000,
+  },
+  step: 1,
+});
+
+priceSlider.noUiSlider.on("update", function (values, handle) {
+  // при изменений положения элементов управления слайдера изменяем соответствующие значения
+  inputs[handle].value = parseInt(values[handle]);
+});
+
+inputMinPrice.addEventListener("change", function () {
+  // при изменении меньшего значения в input - меняем положение соответствующего элемента управления
+  range.noUiSlider.set([this.value, null]);
+});
+
+inputMaxPrice.addEventListener("change", function () {
+  // при изменении большего значения в input - меняем положение соответствующего элемента управления
+  range.noUiSlider.set([null, this.value]);
+});
 
 // modal login
 

@@ -45,44 +45,42 @@
 }
 
 .product-filter__price-range-controls {
-  position: relative;
-  height: 12px;
-  padding-top: 12px;
+  padding-right: 20px;
   margin-bottom: 35px;
-}
 
-.product-filter__price-scale {
-  height: 2px;
-  background-color: $primary-lighgray;
-}
-
-.product-filter__price-bar {
-  height: 4px;
-  background-color: $primary-lighter;
-
-  &--disabled {
+  &:disabled {
     background-color: $basic-gray;
   }
 }
 
-.product-filter__price-toggle {
-  position: absolute;
+.noUi-target {
+  height: 2px;
+  background-color: $primary-lighgray;
+  border: none;
+  cursor: pointer;
+}
+
+.noUi-connect {
+  background-color: $primary-lighter;
+  border: none;
+  cursor: pointer;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+  display: none;
+}
+
+.noUi-horizontal .noUi-handle {
   width: 20px;
   height: 20px;
+  border-radius: 50%;
   background-color: $basic-white;
   border: 2px solid $basic-white;
   outline: 2px solid $primary-lighter;
-  border-radius: 50%;
   cursor: pointer;
-  top: 3px;
-
-  &--min {
-    left: 0;
-  }
-
-  &--max {
-    left: 0;
-  }
+  top: -9px;
+  box-shadow: none;
 
   &:hover {
     background-color: $primary-opacity;
@@ -95,26 +93,28 @@
   &:active {
     background-color: $basic-primary;
   }
-
-  &--disabled {
-    background-color: $basic-white;
-    border: 2px solid $basic-white;
-    outline: 2px solid $basic-gray;
-    cursor: default;
-
-    &:hover {
-      background-color: $basic-white;
-    }
-
-    &:focus {
-      background-color: $basic-white;
-    }
-
-    &:active {
-      background-color: $basic-white;
-    }
-  }
 }
+
+// .product-filter__price-toggle {
+//   &--disabled {
+//     background-color: $basic-white;
+//     border: 2px solid $basic-white;
+//     outline: 2px solid $basic-gray;
+//     cursor: default;
+
+//     &:hover {
+//       background-color: $basic-white;
+//     }
+
+//     &:focus {
+//       background-color: $basic-white;
+//     }
+
+//     &:active {
+//       background-color: $basic-white;
+//     }
+//   }
+// }
 
 .product-filter__price-controls {
   display: flex;

@@ -32,6 +32,10 @@
       type="font/woff2"
       crossorigin
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="stylesheet"
@@ -467,24 +471,10 @@
             <fieldset class="product-filter__price">
               <legend>Цена</legend>
               <div class="product-filter__price-range-filter">
-                <div class="product-filter__price-range-controls">
-                  <div class="product-filter__price-scale">
-                    <div
-                      class="product-filter__price-bar"
-                      style="width: 90%; margin-left: 0"
-                    ></div>
-                  </div>
-                  <div
-                    class="product-filter__price-toggle product-filter__price-toggle--min"
-                    tabindex="0"
-                    style="left: 0"
-                  ></div>
-                  <div
-                    class="product-filter__price-toggle product-filter__price-toggle--max"
-                    tabindex="0"
-                    style="left: 90%"
-                  ></div>
-                </div>
+                <div
+                  class="product-filter__price-range-controls"
+                  id="price-slider"
+                ></div>
                 <div class="product-filter__price-controls">
                   <label class="product-filter__price">
                     <input
@@ -492,10 +482,16 @@
                       name="min-price"
                       value=""
                       placeholder="0"
+                      id="min-price"
                     /> </label
                   ><span> — </span>
                   <label class="product-filter__price">
-                    <input type="text" name="max-price" value="900" />
+                    <input
+                      type="text"
+                      name="max-price"
+                      value="900"
+                      id="max-price"
+                    />
                   </label>
                 </div>
               </div>
@@ -865,7 +861,7 @@
               </li>
               <li class="products__pagination-item">
                 <a
-                  class="products__pagination-button"
+                  class="products__pagination-button products__pagination-button--active"
                   href="#"
                   aria-label="Страница 1"
                   >1</a
@@ -873,7 +869,7 @@
               </li>
               <li class="products__pagination-item">
                 <a
-                  class="products__pagination-button products__pagination-button--active"
+                  class="products__pagination-button"
                   aria-label="Страница 2"
                   >2</a
                 >
@@ -1051,6 +1047,7 @@
         </a>
       </div>
     </footer>
+    <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

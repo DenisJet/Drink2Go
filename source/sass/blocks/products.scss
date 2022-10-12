@@ -82,6 +82,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   @include font(400, 16px, 24px, $basic-primary);
   text-decoration: none;
@@ -112,6 +113,7 @@
     background-color: transparent;
     font-weight: 600;
     color: $basic-black;
+    cursor: default;
   }
 }
 
